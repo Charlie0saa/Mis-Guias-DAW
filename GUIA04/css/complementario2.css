@@ -1,0 +1,55 @@
+/* Color de fondo de toda la página */
+body {
+  background-color: #424242 !important;
+}
+
+/* Estilo del contenedor/tarjeta de la calculadora */
+.card {
+  background-color: #212529 !important; /* Fondo oscuro */
+  color: #ffffff;
+}
+
+/* Cambiar el título */
+.card h4 {
+  color: #ffffff !important;
+}
+
+/* Pantalla de resultados */
+#display {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background-color: #1a1d20 !important;
+  color: #00ffcc !important; /* Texto verde neón */
+  border: 1px solid #343a40;
+}
+
+/* Estilos de botones generales */
+.btn {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+/* Cambiar botones numéricos */
+.btn-light {
+  background-color: #343a40 !important;
+  color: #ffffff !important;
+  border-color: #495057 !important;
+}
+
+.btn-light:hover {
+  background-color: #495057 !important;
+}
+
+/* Cambiar botones de operaciones (+, -, *, /) */
+.btn-primary {
+  background-color: #0d6efd !important;
+  border-color: #0d6efd !important;
+}
+
+/* Cambiar botón de igual (=) */
+.btn-success {
+  background-color: #198754 !important;
+  border-color: #198754 !important;
+}
