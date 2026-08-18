@@ -1,0 +1,22 @@
+[
+  {
+    "pregunta": "¿Cuántos jugadores tiene un equipo de fútbol en la cancha?",
+    "opciones": ["9 jugadores", "10 jugadores", "11 jugadores", "12 jugadores"],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿En qué deporte se utiliza la expresión 'Home Run'?",
+    "opciones": ["Béisbol", "Baloncesto", "Tenis", "Fútbol Americano"],
+    "correcta": 0
+  },
+  {
+    "pregunta": "¿Cada cuántos años se celebran los Juegos Olímpicos?",
+    "opciones": ["2 años", "3 años", "4 años", "5 años"],
+    "correcta": 2
+  },
+  {
+    "pregunta": "¿En qué país se inventó el baloncesto?",
+    "opciones": ["España", "Estados Unidos", "Canadá", "Inglaterra"],
+    "correcta": 1
+  }
+]

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Estadísticas del Sitio Web - Gráficos Dinámicos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Vinculación del CSS externo -->
+    <link rel="stylesheet" href="css/grafico.css">
+</head>
+<body class="container py-4">
+    <h1 class="text-center mb-4">Generador de Gráficos Estadísticos</h1>
+
+    <div class="row">
+        <!-- Panel de Controles -->
+        <div class="col-md-4">
+            <form id="frmGrafico" class="card p-3 shadow-sm">
+                
+                <!-- Datos a Graficar -->
+                <fieldset class="mb-3">
+                    <legend class="col-form-label pt-0 fw-bold">1. Seleccione los datos:</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="tipoGrafico" id="nav" value="navegadores" checked>
+                        <label class="form-check-label" for="nav">Uso de Navegadores Web</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="tipoGrafico" id="so" value="sistemas">
+                        <label class="form-check-label" for="so">Sistemas Operativos</label>
+                    </div>
+                </fieldset>
+
+                <hr />
+
+                <!-- Color de la Gráfica -->
+                <fieldset class="mb-3">
+                    <legend class="col-form-label pt-0 fw-bold">2. Elija el color de las barras:</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="colorBarra" id="cRed" value="#dc3545" checked>
+                        <label class="form-check-label text-danger fw-bold" for="cRed">Rojo</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="colorBarra" id="cBlue" value="#0d6efd">
+                        <label class="form-check-label text-primary fw-bold" for="cBlue">Azul</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="colorBarra" id="cGreen" value="#198754">
+                        <label class="form-check-label text-success fw-bold" for="cGreen">Verde</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="colorBarra" id="cDark" value="#212529">
+                        <label class="form-check-label text-dark fw-bold" for="cDark">Oscuro</label>
+                    </div>
+                </fieldset>
+
+                <hr />
+
+                <!-- Orientación del Gráfico -->
+                <fieldset class="mb-3">
+                    <legend class="col-form-label pt-0 fw-bold">3. Orientación de las barras:</legend>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="orientacion" id="oHor" value="horizontal" checked>
+                        <label class="form-check-label" for="oHor">Horizontal</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="orientacion" id="oVer" value="vertical">
+                        <label class="form-check-label" for="oVer">Vertical</label>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <!-- Área de Visualización del Gráfico -->
+        <div class="col-md-8">
+            <div class="card p-4 shadow-sm chart-container">
+                <h3 id="tituloGrafico" class="card-title text-center text-secondary mb-4">Uso de Navegadores Web</h3>
+                <div id="contenedorGrafico"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/grafico.js"></script>
+</body>
+</html>

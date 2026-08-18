@@ -1,0 +1,46 @@
+body {
+    background-color: #f8f9fa;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.draggable-window {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 320px;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.titlebar {
+    background-color: #6c757d;
+    color: white;
+    padding: 8px 12px;
+    font-weight: bold;
+    cursor: move;
+    user-select: none;
+}
+
+.titlebaractive {
+    background-color: #0d6efd;
+    color: white;
+    padding: 8px 12px;
+    font-weight: bold;
+    cursor: move;
+    user-select: none;
+}
+
+.content {
+    padding: 15px;
+    font-size: 0.9rem;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.transparent-bg {
+    background-color: rgba(255, 255, 255, 0.75);
+}

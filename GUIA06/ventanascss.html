@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Ventanas movibles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/ventanas.css">
+</head>
+<body class="container py-4">
+    
+    <!-- Ventana 1 -->
+    <div id="window1" class="draggable-window">
+        <div id="titlew1" class="titlebar">Ventana de prueba</div>
+        <div class="content">
+            <p>
+                La paleta de colores RGB (RVA en español) consta, básicamente, de tres colores primarios aditivos: 
+                Rojo-Verde-Azul. Estos colores primarios aditivos, en HTML, están representados por tres pares 
+                hexadecimales del tipo 0xHH-HH-HH según el siguiente formato:
+            </p>
+            <p class="text-center fw-bold">#RRGGBB (= #RRVVAA)</p>
+            <p>
+                Los valores que puede adoptar cada uno de los tres pares hexadecimales van del 0x00 (0 decimal) 
+                al 0xFF (255 decimal). Cuanto mayor sea el valor del par, tanto mayor será también la intensidad 
+                (matiz, brillo o claridad) del color correspondiente a ese par (y viceversa).
+            </p>
+        </div>
+    </div>
+
+    <!-- Ventana 2 -->
+    <div id="window2" class="draggable-window" style="top: 150px; left: 350px; z-index: 10;">
+        <div id="titlew2" class="titlebar">Otra ventana</div>
+        <div class="content transparent-bg">
+            <p>
+                Esta es otra ventana. Su valor z-index la pone encima de la otra ventana. 
+                Los estilos CSS hacen que su área de contenido se vea transparente en los navegadores 
+                que soportan esta característica.
+            </p>
+        </div>
+    </div>
+
+    <script src="js/drag.js"></script>
+    <script src="js/loadevents.js"></script>
+</body>
+</html>

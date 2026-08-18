@@ -1,57 +1,63 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> <!-- Define el lenguaje del documento en español -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculadora Básica</title>
-  <!-- Bootstrap 5 CDN -->
+  <meta charset="UTF-8"> <!-- Permite mostrar tildes, ñ y caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace la página responsiva en celulares -->
+  <title>Calculadora Básica</title> <!-- Título que aparece en la pestaña del navegador -->
+  
+  <!-- Carga la librería Bootstrap desde internet para dar diseño estilizado (botones, sombras, filas) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css\complementario2.css">
+  
+  <!-- Vincula tu hoja de estilos CSS propia para personalizar detalles de diseño -->
+  <!-- <link rel="stylesheet" href="css\complementario2.css"> -->
 </head>
-<body class="bg-light d-flex align-items-center min-vh-100">
+<body class="bg-light d-flex align-items-center min-vh-100"> <!-- Fondo gris (bg-light) y centra la calculadora en pantalla -->
 
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12 col-sm-8 col-md-5 col-lg-4">
+  <div class="container"> <!-- Contenedor principal de Bootstrap para centrar el contenido -->
+    <div class="row justify-content-center"> <!-- Crea una fila y centra horizontalmente lo que esté adentro -->
+      <div class="col-12 col-sm-8 col-md-5 col-lg-4"> <!-- Define el ancho: en móvil ocupa 12 columnas, en PC ocupa 4 -->
         
-        <div class="card shadow-lg border-0 rounded-4">
-          <div class="card-body p-4">
-            <h4 class="text-center mb-3 text-secondary">Calculadora</h4>
+        <div class="card shadow-lg border-0 rounded-4"> <!-- Tarjeta blanca con sombra, sin bordes y esquinas redondeadas -->
+          <div class="card-body p-4"> <!-- Cuerpo de la tarjeta con un relleno interno (padding) de nivel 4 -->
+            <h4 class="text-center mb-3 text-secondary">Calculadora</h4> <!-- Encabezado de la calculadora -->
             
-            <!-- Pantalla de la calculadora -->
+            <!-- PANTALLA DE LA CALCULADORA -->
+            <!-- id="display" permite que JS modifique este campo. readonly evita que escriban desde el teclado físico -->
             <input type="text" id="display" class="form-control form-control-lg text-end mb-3 bg-white" readonly value="0">
 
-            <!-- Botones de la calculadora -->
-            <div class="row g-2">
-              <!-- Fila 1: Limpieza y operaciones especiales -->
-              <div class="col-3"><button class="btn btn-danger w-100 fw-bold" onclick="limpiar()">C</button></div>
-              <div class="col-3"><button class="btn btn-secondary w-100 fw-bold" onclick="calcularInversa()">1/x</button></div>
-              <div class="col-3"><button class="btn btn-secondary w-100 fw-bold" onclick="calcularCuadrado()">x²</button></div>
-              <div class="col-3"><button class="btn btn-secondary w-100 fw-bold" onclick="calcularRaiz()">√x</button></div>
+            <!-- BOTONES DE LA CALCULADORA -->
+            <div class="row g-2"> <!-- Fila para los botones con un espacio (gap) de nivel 2 entre ellos -->
+              
+              <!-- FILA 1: Limpieza y operaciones de un solo número (col-3 = 4 botones por fila, ya que 12/3 = 4) -->
+          
+              <div class="col-3"><button class="btn btn-danger w-100 fw-bold" onclick="limpiar()">C</button></div> <!-- Al dar clic ejecuta limpiar() en JS -->
+              <div class="col-3"><button class="btn btn-secondary w-100 fw-bold" onclick="calcularInversa()">1/x</button></div> <!-- Calcula 1 dividido entre x -->
+              <div class="col-3"><button class="btn btn-secondary w-100 fw-bold" onclick="calcularCuadrado()">x²</button></div> <!-- Eleva al cuadrado el número actual -->
+              <div class="col-3"><button class="btn btn-secondary w-100 fw-bold" onclick="calcularRaiz()">√x</button></div> <!-- Saca la raíz cuadrada del número actual -->
 
-              <!-- Fila 2 -->
-              <div class="col-3"><button class="btn btn-light border w-100" onclick="agregarNumero('7')">7</button></div>
-              <div class="col-3"><button class="btn btn-light border w-100" onclick="agregarNumero('8')">8</button></div>
-              <div class="col-3"><button class="btn btn-light border w-100" onclick="agregarNumero('9')">9</button></div>
-              <div class="col-3"><button class="btn btn-primary w-100 fw-bold" onclick="seleccionarOperacion('/')">÷</button></div>
+              <!-- FILA 2: Números 7, 8, 9 y División -->
+              <div class="col-3"><button class="btn btn-light border w-100" onclick="agregarNumero('7')">7</button></div> <!-- Envía el texto '7' a JS -->
+              <div class="col-3"><button class="btn btn-light border w-100" onclick="agregarNumero('8')">8</button></div> <!-- Envía el texto '8' a JS -->
+              <div class="col-3"><button class="btn btn-light border w-100" onclick="agregarNumero('9')">9</button></div> <!-- Envía el texto '9' a JS -->
+              <div class="col-3"><button class="btn btn-primary w-100 fw-bold" onclick="seleccionarOperacion('/')">÷</button></div> <!-- Envía la operación '/' a JS -->
 
-              <!-- Fila 3 -->
+              <!-- FILA 3: Números 4, 5, 6 y Multiplicación -->
               <div class="col-3"><button class="btn btn-light border w-100" onclick="agregarNumero('4')">4</button></div>
               <div class="col-3"><button class="btn btn-light border w-100" onclick="agregarNumero('5')">5</button></div>
               <div class="col-3"><button class="btn btn-light border w-100" onclick="agregarNumero('6')">6</button></div>
-              <div class="col-3"><button class="btn btn-primary w-100 fw-bold" onclick="seleccionarOperacion('*')">×</button></div>
+              <div class="col-3"><button class="btn btn-primary w-100 fw-bold" onclick="seleccionarOperacion('*')">×</button></div> <!-- Envía '*' a JS -->
 
-              <!-- Fila 4 -->
+              <!-- FILA 4: Números 1, 2, 3 y Resta -->
               <div class="col-3"><button class="btn btn-light border w-100" onclick="agregarNumero('1')">1</button></div>
               <div class="col-3"><button class="btn btn-light border w-100" onclick="agregarNumero('2')">2</button></div>
               <div class="col-3"><button class="btn btn-light border w-100" onclick="agregarNumero('3')">3</button></div>
-              <div class="col-3"><button class="btn btn-primary w-100 fw-bold" onclick="seleccionarOperacion('-')">-</button></div>
+              <div class="col-3"><button class="btn btn-primary w-100 fw-bold" onclick="seleccionarOperacion('-')">-</button></div> <!-- Envía '-' a JS -->
 
-              <!-- Fila 5 -->
+              <!-- FILA 5: Número 0, Porcentaje, Igual y Suma -->
               <div class="col-3"><button class="btn btn-light border w-100" onclick="agregarNumero('0')">0</button></div>
-              <div class="col-3"><button class="btn btn-secondary w-100 fw-bold" onclick="seleccionarOperacion('%')">%</button></div>
-              <div class="col-3"><button class="btn btn-success w-100 fw-bold" onclick="procesarResultado()">=</button></div>
-              <div class="col-3"><button class="btn btn-primary w-100 fw-bold" onclick="seleccionarOperacion('+')">+</button></div>
+              <div class="col-3"><button class="btn btn-secondary w-100 fw-bold" onclick="seleccionarOperacion('%')">%</button></div> <!-- Envía '%' a JS -->
+              <div class="col-3"><button class="btn btn-success w-100 fw-bold" onclick="procesarResultado()">=</button></div> <!-- Ejecuta el cálculo final -->
+              <div class="col-3"><button class="btn btn-primary w-100 fw-bold" onclick="seleccionarOperacion('+')">+</button></div> <!-- Envía '+' a JS -->
             </div>
 
           </div>
@@ -61,6 +67,7 @@
     </div>
   </div>
 
+  <!-- Importa el script de JS al final para que el navegador cree todo el HTML antes de ejecutar JS -->
   <script src="js\complementario2.js"></script>
 </body>
 </html>

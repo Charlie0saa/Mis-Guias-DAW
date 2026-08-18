@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Cambio de clases CSS dinámico</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/headings.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container py-4">
+    <header>
+        <h1 id="head">Texto de prueba estilos con className</h1>
+    </header>
+    <section class="mt-4">
+        <article>
+            <div class="mb-3">
+                <label for="classes" class="form-label">Estilo:</label>
+                <select id="classes" name="classes" class="form-select">
+                    <option value="" selected="selected">(Escoja un estilo)</option>
+                    <option value="formal">Formal</option>
+                    <option value="letterpress">Texto incrustado</option>
+                    <option value="offset">Sombra desplazada</option>
+                </select>
+                <br />
+                <div class="btn-group" role="group" aria-label="Controles de clases">
+                    <button type="button" class="btn btn-danger" name="agregar" id="add" value="Agregar">Agregar</button>
+                    <button type="button" class="btn btn-warning" name="eliminar" id="remove" value="Eliminar">Eliminar</button>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <script src="js/classname.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Aplicación Potencia</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h2 class="h4 mb-0">Cálculo de Potencia</h2>
+                    </div>
+                    <div class="card-body p-4">
+                        <form name="frmPotencia" id="frmPotencia" action="javascript:void(0)">
+                            <div class="mb-3 input-group">
+                                <span class="input-group-text"><i class="bi bi-box"></i></span>
+                                <input type="number" step="any" class="form-control" name="txtBase" id="txtBase" placeholder="Ingrese la base" required />
+                            </div>
+                            <div class="mb-3 input-group">
+                                <span class="input-group-text"><i class="bi bi-superscript"></i></span>
+                                <input type="number" step="any" class="form-control" name="txtExponente" id="txtExponente" placeholder="Ingrese el exponente" required />
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" id="btnCalcular" class="btn btn-primary">Calcular</button>
+                            </div>
+                        </form>
+                        <div class="mt-4 text-center">
+                            <div id="resPotencia" class="alert alert-info d-none" role="alert"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/potencia.js"></script>
+</body>
+</html>

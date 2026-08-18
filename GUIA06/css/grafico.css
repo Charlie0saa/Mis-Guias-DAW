@@ -1,0 +1,23 @@
+.chart-container {
+    min-height: 350px;
+    background-color: #f8f9fa;
+}
+
+.bar-container-v {
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.bar-v {
+    width: 50px;
+    transition: height 0.4s ease, background-color 0.3s ease;
+    border-radius: 4px 4px 0 0;
+}
+
+.bar-h {
+    height: 30px;
+    transition: width 0.4s ease, background-color 0.3s ease;
+    border-radius: 0 4px 4px 0;
+}
