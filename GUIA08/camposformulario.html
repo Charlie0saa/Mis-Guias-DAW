@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <title>Controladores de eventos para elementos de formulario</title>
+ <meta charset="utf-8" />
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+rel="stylesheet"
+ integrity="sha384-
+EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body class="container">
+ <h1 class="text-center">Evetos de controles formulario</h1>
+ <!-- Formulario con todos los tipos de campos de formulario -->
+ <div id="formulario" class="d-flex justify-content-center">
+ <form name="everything" class="bg-light p-3 border border rounded w-50">
+ <ul class="inputelements">
+ <li>
+ [1]<input type="text" name="username" placeholder="Usuario"
+class="form-control" />
+ </li>
+ <li>
+ [2]<input type="password" name="password" placeholder="Contraseña"
+class="form-control" />
+ </li>
+ <li>
+ [3]<input type="file" name="file" placeholder="Elija un archivo"
+class="form-control" />
+ </li>
+ </ul>
+ <ul class="chkelements">
+ <label for="extras">Periféricos de la compudora:</label>
+ <li>
+ [4]<input type="checkbox" name="extras" value="quemador" class="formcheck-input" />
+ <label>Quemador de CD/DVD</label>
+ </li>
+ <li>
+ [4]<input type="checkbox" name="extras" value="impresor" class="formcheck-input" />
+ <label>Impresor</label>
+ </li>
+ <li>
+ [4]<input type="checkbox" name="extras" value="parlantes" class="formcheck-input" />
+ <label>Parlantes</label>
+ </li>
+ <li>
+ [4]<input type="checkbox" name="extras" value="inalambrica"
+class="form-check-input" />
+ <label>Tarjeta de red inalámbrica</label>
+ </li>
+ <li>
+ [4]<input type="checkbox" name="extras" value="mouse optico"
+class="form-check-input" />
+ <label>Mouse óptico</label>
+ </li>
+ </ul>
+ <ul class="radelements">
+ <label for="browser">Mi navegador preferido:</label>
+ <li>
+ [5]<input type="radio" name="browser" class="form-check-input"
+value="firefox">
+ <label>Mozilla firefox</label>
+ </li>
+ <li>
+ [5]<input type="radio" name="browser" class="form-check-input"
+value="iexplorer">
+ <label>Internet Explorer</label>
+ </li>
+<li>
+ [5]<input type="radio" name="browser" class="form-check-input"
+value="netscape">
+ <label>Maxthon</label>
+ </li>
+ <li>
+ [5]<input type="radio" class="form-check-input" name="browser"
+value="opera">
+ <label>Opera</label>
+ </li>
+ <li>
+ [5]<input type="radio" class="form-check-input" name="browser"
+value="safari">
+ <label>Safari</label>
+ </li>
+ <li>
+ [5]<input type="radio" class="form-check-input" name="browser"
+value="chrome">
+ <label>Chrome</label>
+ </li>
+ </ul>
+ <ul class="hobies">
+ <label for="hobbies">Mis pasatiempos</label>
+
+ <li>
+ [6]<select name="hobbies" class="form-control" size="6" multiple>
+ <option value="programar" selected="selected">Programar con
+JavaScript</option>
+ <option value="musica">Escuchar música</option>
+<option value="cine">Ir al cine</option>
+<option value="playa">Ir a la playa</option>
+<option value="leer">Leer obras</option>
+<option value="surfear">Surfear</option>
+<option value="bailar">Ir a bailar</option>
+<option value="viajar">Ir de viaje</option>
+ </select>
+ </li>
+ </ul>
+ <ul class="colors">
+ <label for="color">Color favorito:</label>
+ <li>
+ [7]<select name="color" class="form-control">
+ <option value="red" selected="selected">Rojo</option>
+<option value="blue">Azul</option>
+<option value="yellow">Amarillo</option>
+<option value="purple">Morado</option>
+<option value="orange">Naranja</option>
+<option value="pink">Rosado</option>
+<option value="green">Verde</option>
+<option value="gray">Gris</option>
+<option value="black">Negro</option>
+<option value="white">Blanco</option>
+ </select>
+ </li>
+ </ul>
+ <ul class="events">
+ <li>
+ [8]<textarea name="textarea" class="form-control h-100"
+placehold="Eventos capturados"></textarea>
+ </li>
+ </ul>
+ <ul class="buttons">
+ <li>
+ [9] <input type="button" value="Limpiar" class="btn btn-info formcontrol" name="clearbutton" />
+ </li>
+ <br>
+ <li>
+ [10]<input type="submit" value="Enviar" class="btn btn-info formcontrol" name="submitbutton" />
+ </li>
+ <br>
+<li>
+ [11]<input type="reset" value="Restablecer" class="btn btn-info formcontrol" name="resetbutton" />
+ </li>
+ </ul>
+ </form>
+ </div>
+ <br>
+ <!-- Tabla con la descripción de los campos -->
+ <div id="tabla">
+ <table class="table table-dark">
+ <tr >
+ <th colspan="6" class="text-center">Elementos de formulario</th>
+ </tr>
+ <tr>
+
+ <td>[1]Text</td>
+ <td>[2]Password</td>
+ <td>[3]File</td>
+ <td>[4]Checkbox</td>
+ <td>[5]Radio</td>
+ </tr>
+ <tr>
+ <td>[6]Select list</td>
+ <td>[7]Select menu</td>
+ <td>[8]Textarea</td>
+ <td>[9]Button</td>
+ <td>[10]Submit</td>
+
+ </tr>
+ <tr>
+ <td colspan="5" class="text-center">[11]Reset</td>
+ </tr>
+ </table>
+ </div>
+ <script type="text/javascript" src="js/eventreport.js"></script>
+</body>
+</html>
